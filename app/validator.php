@@ -78,6 +78,9 @@ if ($config['captcha']==1){
 
 if($val->validateForm()){
     $suffix = $val->generateRandomSuffix($config['desired_length']);
+    while ($db->getUrlBySuffix($suffix)){
+        $suffix = $val->generateRandomSuffix($config['desired_length']);
+    }
     if ($db->insertIntoDb($_POST['url'],$suffix)){
 
         $date = date_create();
