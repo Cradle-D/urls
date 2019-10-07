@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+*, *::after, *::before {
+    box-sizing: border-box; }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background: radial-gradient(#007fce, #0b1d29);
+}
+
+.hidden-1px{
+    resize: none;
+    position: fixed;
+    width:1px;
+    height: 1px;
+    top:190px;
+    left:50%;
+    z-index: 0;
+    border: none;
+    background-color: white;
+}
+
+.setting-name{
+    display: inline-block;
+    width: 150px;
+    height:50px;
+    position: relative;
+    top:-18px;
+    font-size: 20px;
+    border: solid #ccc 1px;
+    text-align: center;
+    padding-top: 13px;
+    font-weight: bold;
+    color:white;
+}
+.settings{
+    margin-left: 35px;
+}
+.setting-block{
+    display: inline-block;
+}
+.content{
+    display:block;
+    width:90%;
+    position: fixed;
+    top:30px;
+    left:50%;
+    margin-left: -45%;
+    border: solid #ccc 1px;
+    padding: 30px 27px;
+    box-sizing:border-box;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgba(255,255,255,0.3);
+}
+.content p{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.link{
+    width:100%;
+}
+.link div {
+
+    display:block;
+    float:left;
+    position: relative;
+    border:solid #ccc 1px;
+    border-top:none!important;
+    border-right: none;
+    font-size: 20px;
+    box-sizing: border-box;
+    overflow-x:hidden;
+    background-color: white;
+    white-space:nowrap;
+}
+.date-time{
+    width:18%;
+    text-align: center;
+}
+.ip-addr{
+    width:15%;
+    text-align: center;
+}
+.full-url{
+    cursor: pointer;
+    width:48%;
+    background-color: white;
+
+}
+
+.full-url-demo{
+    text-align: center;
+    width:48%;
+    background-color: white;
+}
+.short-url-demo{
+    text-align: center;
+    width:18%;
+    background-color: white;
+}
+.back-url{
+    width:15%;
+}
+.open-all{
+    display: inline-block;
+    text-align: center;
+    width:99%;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    /*font-weight: bold;*/
+    font-size: 20px;
+}
+.open-all:hover{
+    background-color: rgba(0, 250, 255, 0.08);
+}
+
+
+.full-url:hover{
+    background-color: rgba(0, 250, 255, 0.08);
+}
+.full-url:active{
+    background-color: rgba(0, 250, 255, 0.13);
+}
+
+.short-url{
+    text-align: left;
+    cursor: pointer;
+    width:15%;
+    background-color: white;
+}
+.short-url:hover{
+    background-color: rgba(0, 250, 255, 0.08);
+}
+.short-url:active{
+    background-color: rgba(0, 250, 255, 0.13);
+}
+
+.link div:first-child{
+     border-left:solid #ccc 1px;
+ }
+
+.recently-shorts{
+    width:100%;
+}
+
+.toggle-button {
+    right: 6px;
+    margin-right:20px;
+}
+
+.delete-link{
+    height:24px;
+    width:3%;
+    background-image:url("/../../img/de24.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    cursor: pointer;
+    border-right:solid #ccc 1px!important;
+}
+.delete-link:hover{
+    background-image:url("/../../img/dered24.png");
+}
+.alert{
+    background-color: white;
+    left:50%;
+    /*border: solid #ccc 1px;*/
+    color:white;
+    font-size: 20px;
+    box-sizing:border-box;
+    text-align: center;
+    display:block;
+    width:700px;
+    position: absolute;
+    top:20px;
+    margin-left: -350px;
+    border: solid #ccc 1px;
+    padding: 30px 27px;
+    box-shadow: inset 0 0 10px rgba(255, 4, 0, 0.8), 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgba(0, 127, 206, 0.8);
+    z-index: 30;
+}
+
+.wrong{
+    box-shadow: inset 0 0 10px rgba(154, 10, 0, 0.5);
+}
+
+#message{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.hidden{
+    display:none;
+}
+/*
+ * Toggle button styles
+ */
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    color: #fff; }
+.toggle-button label {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left; }
+.toggle-button input {
+    display: none; }
+.toggle-button__icon {
+    cursor: pointer;
+    pointer-events: none; }
+.toggle-button__icon:before, .toggle-button__icon:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transition: 0.2s ease-out; }
+
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.toggle-button--aava label {
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.2s;
+    border:solid #ccc 1px;
+    /*border-radius: 1rem; */
+}
+.toggle-button--aava label:before, .toggle-button--aava label:after {
+    position: absolute;
+    right: 1.5rem;
+    transition: all 0.2s .1s ease-out; }
+.toggle-button--aava label:before {
+    content: attr(data-on-text); }
+.toggle-button--aava label:after {
+    content: attr(data-off-text); }
+
+.toggle-button--aava input[type=checkbox] + label {
+    width: 120px;
+    background: #ff0000; }
+.toggle-button--aava input[type=checkbox] + label:before {
+    opacity: 0;
+    transform: translate(0, 20px); }
+.toggle-button--aava input[type=checkbox] + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+
+.toggle-button--aava input[type=checkbox]:checked ~ label {
+    width: 120px;
+    background: #007fce; }
+.toggle-button--aava input[type=checkbox]:checked ~ label:before {
+    opacity: 1;
+    transform: translate(0, 0); }
+.toggle-button--aava input[type=checkbox]:checked ~ label:after {
+    opacity: 0;
+    transform: translate(0, -20px); }
+
+.toggle-button--aava input[type=checkbox]:checked ~ .toggle-button__icon:before {
+    transform: translate(-10%, 100%) rotate(45deg);
+    width: 16.66667px; }
+
+.toggle-button--aava input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    transform: translate(30%) rotate(-45deg); }
+
+.toggle-button--aava .toggle-button__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px; }
+.toggle-button--aava .toggle-button__icon:before, .toggle-button--aava .toggle-button__icon:after {
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+.toggle-button--aava .toggle-button__icon:before {
+    width: 25px;
+    transform: rotate(45deg); }
+.toggle-button--aava .toggle-button__icon:after {
+    width: 25px;
+    transform: rotate(-45deg); }

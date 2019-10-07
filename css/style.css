@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background: radial-gradient(#007fce, #0b1d29);
+}
+
+.nofound{
+    width:99%;
+    height: 99%;
+    font-size: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+.hidden-1px{
+    resize: none;
+    position: fixed;
+    width:1px;
+    height: 1px;
+    top:190px;
+    left:50%;
+    z-index: 0;
+    border: none;
+    background-color: white;
+}
+
+.content{
+    display:block;
+    width:700px;
+    position: fixed;
+    top:120px;
+    left:50%;
+    margin-left: -350px;
+    border: solid #ccc 1px;
+    padding: 30px 27px;
+    box-sizing:border-box;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgba(255,255,255,0.3);
+}
+
+.url-form{
+    display:block;
+    width:644px;
+    min-height: 80px;
+    box-sizing:border-box;
+    /*height:150px;*/
+}
+.url-input{
+    background-color: white;
+    width: 72%;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-right:none;
+    display: block;
+    margin-bottom: 0;
+    float: left;
+    font-size: 20px;
+    color: black;
+    padding: 0 20px;
+    outline: 0;
+    outline-offset: 0;
+    z-index: 20;
+}
+
+#submit{
+    font-size: 20px;
+    display: block;
+    background-color: rgb(113, 111, 115);
+    color: white;
+    border: 1px solid #ccc;
+    border-left:none;
+    height: 62px;
+    float: left;
+    width:21.5%;
+    outline: 0;
+    outline-offset: 0;
+}
+
+#submit:enabled{
+    background-color: rgba(0,127,206,0.5);
+    cursor: pointer;
+}
+
+#submit:enabled:hover{
+    background-color: rgba(0, 153, 206, 0.9);
+}
+#submit:active{
+    background-color: rgba(0, 168, 206, 0.9);
+}
+
+.captcha{
+    display: block;
+    width:644px;
+}
+
+.captcha input{
+    margin-top: 20px;
+    width:70px;
+    margin-left: 211px;
+}
+
+.captcha-img{
+    background-color: white;
+    float: left;
+    margin-top: 20px;
+    width:100px;
+    height: 40px;
+    padding:10px 5px;
+    border: 1px solid #ccc;
+    border-left:none;
+}
+
+.recently-shorts{
+    display: block;
+    width: 644px;
+}
+.recently-shorts div:first-child{
+    border-top:solid #ccc 1px;
+}
+
+.link{
+    width:100%;
+    height: 60px;
+}
+.link div{
+    display:block;
+    float:left;
+    position: relative;
+    border:solid #ccc 1px;
+    border-top:none!important;
+    border-right: none;
+    font-size: 20px;
+    height: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 17px;
+    cursor: pointer;
+}
+.link div:first-child{
+    border-left:solid #ccc 1px;
+}
+.full-url{
+    width:60.75%;
+    background-color: white;
+    overflow-x:hidden;
+}
+.full-url:hover{
+    background-color: rgba(0, 250, 255, 0.08);
+}
+.full-url:active{
+    background-color: rgba(0, 250, 255, 0.13);
+}
+
+
+.short-url{
+    width:28.36%;
+    background-color: white;
+}
+.short-url:hover{
+    background-color: rgba(0, 250, 255, 0.08);
+}
+.short-url:active{
+    background-color: rgba(0, 250, 255, 0.13);
+}
+
+
+.delete-link{
+    width:10.88%;
+    background-image:url("../img/de52.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    cursor: pointer;
+    border-right:solid #ccc 1px!important;
+    background-color: white;
+}
+.delete-link:hover{
+    background-image:url("../img/dered52.png");
+    /*background-color: rgba(0,127,206,0.5);*/
+}
+.alert{
+    background-color: white;
+    left:50%;
+    /*border: solid #ccc 1px;*/
+    color:white;
+    font-size: 20px;
+    box-sizing:border-box;
+    text-align: center;
+    display:block;
+    width:700px;
+    position: absolute;
+    top:20px;
+    margin-left: -350px;
+    border: solid #ccc 1px;
+    padding: 30px 27px;
+    box-shadow: inset 0 0 10px rgba(255, 4, 0, 0.8), 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgba(255,255,255,0.3);
+}
+
+#message{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.hidden{
+    display:none;
+}
+
+.thanx{
+    display: none;
+    background-color: white;
+    position: fixed;
+    width:560px;
+    left:50%;
+    margin-left: -280px;
+    border: solid #ccc 1px;
+    padding: 30px 27px;
+    box-sizing:border-box;
+    top:270px;
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.wrong{
+    box-shadow: inset 0 0 10px rgba(154, 10, 0, 0.5);
+}
